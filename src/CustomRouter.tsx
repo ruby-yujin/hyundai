@@ -1,8 +1,8 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
+import { ROUTER_PATH } from "./constants/constants";
 
 import Login from "./pages/auth/Login";
-import { ROUTER_PATH } from "./constants/constants";
 
 const CustomRouter: React.FC = () => {
   return (
