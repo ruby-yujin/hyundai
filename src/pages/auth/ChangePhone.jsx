@@ -10,7 +10,7 @@ function ChangePassword() {
       <AuthInnerLayout>
         <AuthPageTitle
           title="현대중공업-새마을금고"
-          description="전화번호 변경"
+          description="휴대폰번호 변경"
         />
         <ChangePhone />
       </AuthInnerLayout>

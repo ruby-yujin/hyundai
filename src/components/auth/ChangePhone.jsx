@@ -43,7 +43,7 @@ const ChangePhone = () => {
           />
 
           <BtnWrap>
-            <BtnSubmit type="submit" text="전화번호 변경" />
+            <BtnSubmit type="submit" text="휴대폰번호 변경" />
           </BtnWrap>
         </form>
       </Formik>

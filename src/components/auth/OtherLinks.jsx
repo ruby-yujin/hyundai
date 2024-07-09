@@ -6,13 +6,13 @@ function OtherLinks() {
   return (
     <OtherLinksWrap>
       <li>
-        <Link to="">시스템사용 등록</Link>
+        <Link to="/register">시스템사용 등록</Link>
       </li>
       <li>
-        <Link to="">비밀번호 변경</Link>
+        <Link to="/change-password">비밀번호 변경</Link>
       </li>
       <li>
-        <Link to="">휴대폰번호 변경</Link>
+        <Link to="change-phone">휴대폰번호 변경</Link>
       </li>
     </OtherLinksWrap>
   );
