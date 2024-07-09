@@ -40,7 +40,7 @@ const OtherLinksWrap = styled.ul`
       background: #fff;
       position: absolute;
       top: 4px;
-      left: -10px;
+      left: -15px;
     }
     &:first-child:before {
       content: none;

@@ -19,10 +19,11 @@ const ConfirmNumberWrap = styled.div`
     border: none;
     background: #fff;
     color: #666666;
-    font-size: 3.5rem;
+    font-size: 2.4rem;
     text-align: center;
     margin-bottom: 10px;
     &:first-child {
+      font-size: 3.5rem;
       letter-spacing: 10px;
     }
   }
