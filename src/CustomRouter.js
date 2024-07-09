@@ -4,6 +4,8 @@ import { ROUTER_PATH } from "./constants/constants";
 
 import Login from "./pages/auth/Login";
 import Register from "./pages/auth/Register";
+import ChangePassword from "./pages/auth/ChangePassword";
+import ChangePhone from "./pages/auth/ChangePhone";
 
 function CustomRouter() {
   return (
@@ -12,6 +14,11 @@ function CustomRouter() {
       <Route path={ROUTER_PATH.login} element={<Login />} />
       {/* 시스템사용등록 */}
       <Route path={ROUTER_PATH.register} element={<Register />} />
+      {/* 비밀번호 변경 */}
+      <Route path={ROUTER_PATH.chagnePassword} element={<ChangePassword />} />
+      {/* 전화번호 변경 */}
+      <Route path={ROUTER_PATH.chagnePhone} element={<ChangePhone />} />
+
       {/* 단체별 공제현황 */}
       <Route path={ROUTER_PATH.deductionStatus} element={<Login />} />
       {/* 단체 회원관리  */}
