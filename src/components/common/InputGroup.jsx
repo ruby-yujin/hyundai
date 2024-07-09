@@ -42,9 +42,9 @@ const InputField = styled(Field)`
   border-radius: 999px;
   padding: 0.5rem 1rem;
   font-size: 2.2rem;
-  box-shadow: 1px 15px 10px 1px rgba(0, 0, 0, 0.3);
-  -webkit-box-shadow: 1px 15px 10px 1px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 1px 15px 10px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 7px 5px 0px rgba(84, 84, 84, 0.18);
+  -webkit-box-shadow: 0px 7px 5px 0px rgba(84, 84, 84, 0.18);
+  -moz-box-shadow: 0px 7px 5px 0px rgba(84, 84, 84, 0.18);
   text-indent: 20px;
   &:focus {
     outline: none;
