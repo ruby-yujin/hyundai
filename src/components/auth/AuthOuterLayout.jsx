@@ -1,11 +1,7 @@
-import React, { ReactNode } from "react";
+import React from "react";
 import styled from "styled-components";
 
-interface AuthOuterLayoutProps {
-  children: ReactNode;
-}
-
-const AuthOuterLayout: React.FC<AuthOuterLayoutProps> = ({ children }) => {
+const AuthOuterLayout = ({ children }) => {
   return (
     <AuthOuterLayoutWrap>
       <BuleBg src="img/auth/bg.png" alt="파란배경 이미지" />
@@ -16,7 +12,6 @@ const AuthOuterLayout: React.FC<AuthOuterLayoutProps> = ({ children }) => {
 
 const AuthOuterLayoutWrap = styled.div`
   position: relative;
-  
 `;
 
 const BuleBg = styled.img`

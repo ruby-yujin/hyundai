@@ -4,7 +4,7 @@ import { ROUTER_PATH } from "./constants/constants";
 
 import Login from "./pages/auth/Login";
 
-const CustomRouter: React.FC = () => {
+function CustomRouter() {
   return (
     <Routes>
       {/* 로그인 */}
@@ -21,6 +21,6 @@ const CustomRouter: React.FC = () => {
       ))} */}
     </Routes>
   );
-};
+}
 
 export default CustomRouter;

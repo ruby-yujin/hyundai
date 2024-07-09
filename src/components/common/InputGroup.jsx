@@ -2,21 +2,7 @@ import React from "react";
 import { Field } from "formik";
 import styled from "styled-components";
 
-interface InputGroupProps {
-  name: string;
-  labelText: string;
-  inputType: string;
-  placeholder?: string;
-  disabled: boolean;
-}
-
-const InputGroup: React.FC<InputGroupProps> = ({
-  name,
-  labelText,
-  inputType,
-  placeholder,
-  disabled,
-}) => {
+const InputGroup = ({ labelText, name, inputType, placeholder, disabled }) => {
   return (
     <InputGroupWrapper>
       <InputLabel htmlFor={labelText}>{labelText}</InputLabel>

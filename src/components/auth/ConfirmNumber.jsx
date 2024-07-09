@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const ConfirmNumber: React.FC = () => {
+const ConfirmNumber = () => {
   return (
     <ConfirmNumberWrap>
       <input

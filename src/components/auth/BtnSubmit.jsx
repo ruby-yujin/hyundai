@@ -1,12 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-interface BtnSubmitPropsItem {
-  text: string;
-  type: "submit" | "reset" | "button";
-}
-
-const BtnSubmit: React.FC<BtnSubmitPropsItem> = ({ text, type }) => {
+const BtnSubmit = ({ text, type }) => {
   return <BtnSubmitWrap type={type}>{text}</BtnSubmitWrap>;
 };
 

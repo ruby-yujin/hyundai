@@ -1,15 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-interface AuthTitlePropsItem {
-  title: string;
-  description: string;
-}
-
-const AuthPageTitle: React.FC<AuthTitlePropsItem> = ({
-  title,
-  description,
-}) => {
+const AuthPageTitle = ({ title, description }) => {
   return (
     <AuthPageTitleWrap>
       <img src="img/auth/icon-peoples.png" alt="단체아이콘" />

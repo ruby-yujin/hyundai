@@ -9,7 +9,7 @@ import BtnSubmit from "./BtnSubmit";
 
 const initialValues = { memberNumber: "", memberPhone: "", memberPassword: "" };
 
-const LoginForm: React.FC = () => {
+const LoginForm = () => {
   return (
     <LoginFormWrap>
       <Formik initialValues={initialValues} onSubmit={() => {}}>

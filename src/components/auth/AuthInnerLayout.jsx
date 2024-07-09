@@ -1,11 +1,7 @@
-import React, { ReactNode } from "react";
+import React from "react";
 import styled from "styled-components";
 
-interface AuthInnerLayoutProps {
-  children: ReactNode;
-}
-
-const AuthInnerLayout: React.FC<AuthInnerLayoutProps> = ({ children }) => {
+const AuthInnerLayout = ({ children }) => {
   return <AuthInnerLayoutWrap>{children}</AuthInnerLayoutWrap>;
 };
 
