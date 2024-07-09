@@ -14,10 +14,9 @@ const BtnSubmitWrap = styled.button`
   color: #fff;
   font-size: 3rem;
 
-  box-shadow: 1px 15px 10px 1px rgba(0, 0, 0, 0.3);
-  -webkit-box-shadow: 1px 15px 10px 1px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 1px 15px 10px 1px rgba(0, 0, 0, 0.3);
-
+  box-shadow: 0px 7px 5px 0px rgba(41, 41, 41, 0.46);
+  -webkit-box-shadow: 0px 7px 5px 0px rgba(41, 41, 41, 0.46);
+  -moz-box-shadow: 0px 7px 5px 0px rgba(41, 41, 41, 0.46);
   @media screen and (max-width: 1024px) {
     height: 55px;
     font-size: 2.4rem;
