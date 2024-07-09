@@ -17,15 +17,14 @@ const AuthPageTitleWrap = styled.div`
   color: #fff;
   img {
     width: 200px;
-    margin-top: 7%;
   }
   h1 {
-    font-size: 100px;
+    font-size: 10rem;
     font-weight: 400;
     margin: 40px 0 20px;
   }
   p {
-    font-size: 70px;
+    font-size: 7rem;
     font-weight: 400;
   }
 `;
