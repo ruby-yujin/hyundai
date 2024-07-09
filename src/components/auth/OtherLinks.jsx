@@ -30,7 +30,7 @@ const OtherLinksWrap = styled.ul`
       width: 100%;
       display: block;
       color: #fff;
-      font-size: 22px;
+      font-size: 2.2rem;
       font-weight: 400;
     }
     &:before {
@@ -44,6 +44,25 @@ const OtherLinksWrap = styled.ul`
     }
     &:first-child:before {
       content: none;
+    }
+  }
+  @media screen and (max-width: 1024px) {
+    width: 90%;
+    margin: 7% auto 0;
+    li {
+      width: 100%;
+      text-align: center;
+
+      a {
+        color: #000;
+        font-size: 1.6rem;
+      }
+      &:before {
+        background: #000;
+        height: 14px;
+        left: -6px;
+        top: 1px;
+      }
     }
   }
 `;

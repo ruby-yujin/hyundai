@@ -25,9 +25,13 @@ const InputGroupWrapper = styled.div`
 
 const InputLabel = styled.label`
   color: #fff;
-  font-size: 24px;
+  font-size: 2.4rem;
   font-weight: 300;
   margin-bottom: 0.5rem;
+  @media screen and (max-width: 1024px) {
+    padding-left: 30px;
+    font-size: 1.8rem;
+  }
 `;
 
 const InputField = styled(Field)`
@@ -37,7 +41,7 @@ const InputField = styled(Field)`
   background: #fff;
   border-radius: 999px;
   padding: 0.5rem 1rem;
-  font-size: 22px;
+  font-size: 2.2rem;
   box-shadow: 1px 15px 10px 1px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: 1px 15px 10px 1px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 1px 15px 10px 1px rgba(0, 0, 0, 0.3);
@@ -45,6 +49,10 @@ const InputField = styled(Field)`
   &:focus {
     outline: none;
     border-color: #4285f4;
+  }
+  @media screen and (max-width: 1024px) {
+    height: 55px;
+    font-size: 1.8rem;
   }
 `;
 

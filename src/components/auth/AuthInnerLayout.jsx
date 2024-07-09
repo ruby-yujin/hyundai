@@ -14,6 +14,11 @@ const AuthInnerLayoutWrap = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media screen and (max-width: 1024px) {
+    padding: 60px 4% 0;
+    flex-direction: column;
+  }
 `;
 
 export default AuthInnerLayout;

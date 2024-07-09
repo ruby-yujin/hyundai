@@ -27,3 +27,34 @@ ul {
 a {
   text-decoration: none;
 }
+
+.show-desktop,
+.show-mobile {
+  transition: opacity 0.3s ease;
+}
+
+/* 1024px 이상에서 보이고, 그 이하에서는 숨기는 클래스 */
+.show-desktop {
+  opacity: 1;
+  display: block;
+}
+
+@media screen and (max-width: 1024px) {
+  .show-desktop {
+    opacity: 0;
+    display: none;
+  }
+}
+
+/* 1024px 이하에서 보이고, 그 이상에서는 숨기는 클래스 */
+.show-mobile {
+  display: none;
+  opacity: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .show-mobile {
+    display: block;
+    opacity: 1;
+  }
+}

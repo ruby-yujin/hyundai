@@ -4,7 +4,16 @@ import styled from "styled-components";
 const AuthOuterLayout = ({ children }) => {
   return (
     <AuthOuterLayoutWrap>
-      <BuleBg src="img/auth/bg.png" alt="파란배경 이미지" />
+      <BuleBg
+        src="img/auth/bg.png"
+        alt="파란배경 이미지"
+        className="show-desktop"
+      />
+      <BuleBgMobile
+        src="img/auth/bg_m.png"
+        alt="파란배경 이미지"
+        className="show-mobile"
+      />
       {children}
     </AuthOuterLayoutWrap>
   );
@@ -20,7 +29,15 @@ const BuleBg = styled.img`
   left: 0;
   width: 100vw;
   height: 100vh;
-  /* background: linear-gradient(to right, #1f3e74, #284f94); */
+`;
+
+const BuleBgMobile = styled.img`
+  position: absolute;
+  top: -230px;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 `;
 
 export default AuthOuterLayout;

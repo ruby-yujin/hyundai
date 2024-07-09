@@ -27,6 +27,21 @@ const AuthPageTitleWrap = styled.div`
     font-size: 7rem;
     font-weight: 400;
   }
+
+  @media screen and (max-width: 1024px) {
+    text-align: center;
+    margin-bottom: 40px;
+    img {
+      width: 100px;
+    }
+    h1 {
+      font-size: 4rem;
+      margin: 20px 0 10px;
+    }
+    p {
+      font-size: 2.5rem;
+    }
+  }
 `;
 
 export default AuthPageTitle;

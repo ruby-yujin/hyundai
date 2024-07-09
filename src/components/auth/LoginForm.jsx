@@ -49,6 +49,9 @@ const LoginFormWrap = styled.div`
   max-width: 500px;
   width: 100%;
   margin-top: 3%;
+  @media screen and (max-width: 1024px) {
+    margin-top: 0;
+  }
 `;
 
 export default LoginForm;
