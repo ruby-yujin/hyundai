@@ -50,6 +50,9 @@ const InputField = styled(Field)`
     outline: none;
     border-color: #4285f4;
   }
+  &:disabled {
+    background: #cdcdcd;
+  }
   @media screen and (max-width: 1024px) {
     height: 55px;
     font-size: 1.8rem;

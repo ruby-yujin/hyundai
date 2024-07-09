@@ -11,7 +11,7 @@ const initialValues = { memberNumber: "", memberPhone: "", memberPassword: "" };
 
 const LoginForm = () => {
   return (
-    <LoginFormWrap>
+    <AuthFormWrap>
       <Formik initialValues={initialValues} onSubmit={() => {}}>
         <form action="">
           <InputGroup
@@ -41,11 +41,11 @@ const LoginForm = () => {
         </form>
       </Formik>
       <OtherLinks />
-    </LoginFormWrap>
+    </AuthFormWrap>
   );
 };
 
-const LoginFormWrap = styled.div`
+export const AuthFormWrap = styled.div`
   max-width: 500px;
   width: 100%;
   margin-top: 3%;

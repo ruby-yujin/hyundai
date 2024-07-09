@@ -1,6 +1,6 @@
 export const ROUTER_PATH = {
   login: "/",
-  signup: "/signup",
+  register: "/register",
   deductionStatus: "/deduction-status",
   deductionStatusTotal: "/deduction-status-total",
   memberManagement: "/member-management",

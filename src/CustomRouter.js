@@ -3,14 +3,15 @@ import { Routes, Route } from "react-router-dom";
 import { ROUTER_PATH } from "./constants/constants";
 
 import Login from "./pages/auth/Login";
+import Register from "./pages/auth/Register";
 
 function CustomRouter() {
   return (
     <Routes>
       {/* 로그인 */}
       <Route path={ROUTER_PATH.login} element={<Login />} />
-      {/* 회원가입 */}
-      <Route path={ROUTER_PATH.signup} element={<Login />} />
+      {/* 시스템사용등록 */}
+      <Route path={ROUTER_PATH.register} element={<Register />} />
       {/* 단체별 공제현황 */}
       <Route path={ROUTER_PATH.deductionStatus} element={<Login />} />
       {/* 단체 회원관리  */}
