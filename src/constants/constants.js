@@ -3,6 +3,7 @@ export const ROUTER_PATH = {
   register: "/register",
   chagnePassword: "/change-password",
   chagnePhone: "/change-phone",
+  allMemberGroup :"/all-member-group",
   deductionStatus: "/deduction-status",
   deductionStatusTotal: "/deduction-status-total",
   memberManagement: "/member-management",
