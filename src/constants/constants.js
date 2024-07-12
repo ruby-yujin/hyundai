@@ -1,8 +1,8 @@
 export const ROUTER_PATH = {
   login: "/",
   register: "/register",
-  chagnePassword: "/change-password",
-  chagnePhone: "/change-phone",
+  changePassword: "/change-password",
+  changePhone: "/change-phone",
   allMemberGroup :"/all-member-group",
   deductionStatus: "/deduction-status",
   deductionStatusTotal: "/deduction-status-total",
@@ -24,7 +24,7 @@ export const CATEGORY_INFOS = [
   },
   {
     id: "register",
-    menu: "신청관리",
+    menu: "신청 관리(관리자)",
     route: [{ name: "신청 관리(관리자)", path: ROUTER_PATH.deductionStatus }],
   },
 ];
