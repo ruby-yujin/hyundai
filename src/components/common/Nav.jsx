@@ -8,7 +8,6 @@ import { CATEGORY_INFOS } from '../../constants/constants';
 
 
 function Nav() {
-
   const [activeCategory, setActiveCategory] = useState(null);
   const location = useLocation();
 
@@ -57,9 +56,9 @@ const NavWrap = styled.nav`
   width: 300px;
   height: 100vh;
   background: #1f3e74;
-  box-shadow: 14px -11px 5px -11px rgba(0, 0, 0, 0.56);
-  -webkit-box-shadow: 14px -11px 5px -11px rgba(0, 0, 0, 0.56);
-  -moz-box-shadow: 14px -11px 5px -11px rgba(0, 0, 0, 0.56);
+  box-shadow: 14px -11px 5px -11px rgba(0, 0, 0, .4);
+  -webkit-box-shadow: 14px -11px 5px -11px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 14px -11px 5px -11px rgba(0, 0, 0, 0.4);
 `;
 
 
@@ -76,7 +75,7 @@ const MainMenu = styled.ul`
         display: flex;
         justify-content: center;
         align-items: center;
-      
+        font-weight: 500;
         &.active {
           background:#295095;
         }
@@ -104,6 +103,7 @@ const SubMenu = styled.ul`
       color:#666666;
       font-size: 1.7rem;
       background:#fff;
+      font-weight: 500;
       &.active{
         background:#f0f0f0;
         font-weight: bold;

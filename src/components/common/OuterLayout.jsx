@@ -1,4 +1,4 @@
-import React, { Children } from "react";
+import React from "react";
 import styled from "styled-components";
 
 import Header from "./Header";
@@ -26,11 +26,15 @@ function OuterLayout({ children }) {
 const OuterLayOutWrap = styled.div``;
 
 const ContentGrid = styled.main`
-  display: flex;
+position:relative;
   aside {
     width: 300px;
+    position:absolute;
+    top:0;
+    left:0;
   }
   section {
+    margin-left: 300px;
     width: calc(100% - 300px);
     background: #1f3e74;
     padding-top: 20px;
@@ -39,9 +43,10 @@ const ContentGrid = styled.main`
 
 const Content = styled.div`
   height: 100%;
-  background: #fff;
+  background: #f0f0f0;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
+ 
 `;
 
 export default OuterLayout;
