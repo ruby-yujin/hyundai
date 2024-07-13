@@ -3,7 +3,7 @@ export const ROUTER_PATH = {
   register: "/register",
   changePassword: "/change-password",
   changePhone: "/change-phone",
-  allMemberGroup :"/all-member-group",
+  allMemberGroup: "/all-member-group",
   deductionStatus: "/deduction-status",
   deductionStatusTotal: "/deduction-status-total",
   memberManagement: "/member-management",
@@ -29,31 +29,60 @@ export const CATEGORY_INFOS = [
   },
 ];
 
-
 export const COMMON_TABLE_TH = [
   {
-    th : "코드"
+    th: "코드",
   },
   {
-    th : "단체명"
+    th: "단체명",
   },
   {
-    th : "월회비"
+    th: "월회비",
   },
   {
-    th : "가입일자"
+    th: "가입일자",
   },
   {
-    th : "탈퇴일자"
+    th: "탈퇴일자",
   },
   {
-    th : "회사명"
+    th: "회사명",
   },
-]
+];
 
 export const COMMON_TABLE_DATA = [
-  { code: '001', 단체명: '단체A', 월회비: '10000', 가입일자: '2023-01-01', 탈퇴일자: '', 회사명: '회사A' },
-  { code: '002', 단체명: '단체B', 월회비: '20000', 가입일자: '2023-02-01', 탈퇴일자: '2023-12-31', 회사명: '회사B' },
-]
+  {
+    code: "001",
+    단체명: "단체A",
+    월회비: "10000",
+    가입일자: "2023-01-01",
+    탈퇴일자: "",
+    회사명: "회사A",
+  },
+  {
+    code: "002",
+    단체명: "단체B",
+    월회비: "20000",
+    가입일자: "2023-02-01",
+    탈퇴일자: "2023-12-31",
+    회사명: "회사B",
+  },
+  {
+    code: "001",
+    단체명: "단체C",
+    월회비: "10000",
+    가입일자: "2023-01-01",
+    탈퇴일자: "",
+    회사명: "회사C",
+  },
+  {
+    code: "002",
+    단체명: "단체D",
+    월회비: "20000",
+    가입일자: "2023-02-01",
+    탈퇴일자: "2023-12-31",
+    회사명: "회사D",
+  },
+];
 
 export const NUMBER_COMMA = /\B(?=(\d{3})+(?!\d))/g;

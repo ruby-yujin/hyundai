@@ -1,13 +1,20 @@
 import React from "react";
 import styled from "styled-components";
-import { LogOut } from "lucide-react";
+import { AlignJustify, LogOut } from "lucide-react";
+import { useNav } from "../../context/useNav";
 
 function Header({ pageTitle }) {
+  const { toggleNav } = useNav();
+
   return (
     <HeaderWrap>
+      <BtnNav onClick={toggleNav}>
+        <AlignJustify size={32} />
+      </BtnNav>
       <h1>{pageTitle}</h1>
       <BtnLogout>
-        로그아웃 <LogOut size={15} />
+        <strong>로그아웃</strong>
+        <LogOut />
       </BtnLogout>
     </HeaderWrap>
   );
@@ -30,6 +37,22 @@ const HeaderWrap = styled.header`
     color: #fff;
     font-size: 2.4rem;
   }
+  @media screen and (max-width: 1024px) {
+    h1 {
+      font-size: 2rem;
+    }
+  }
+`;
+
+const BtnNav = styled.button`
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  margin-top: -16px;
+  svg {
+    color: #fff;
+    width: 30px;
+  }
 `;
 
 const BtnLogout = styled.button`
@@ -37,13 +60,29 @@ const BtnLogout = styled.button`
   top: 50%;
   right: 40px;
   margin-top: -8px;
-  color: #fff;
-  font-size: 1.5rem;
-  font-weight: bold;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 5px;
+  strong {
+    display: block;
+    color: #fff;
+    font-size: 1.5rem;
+  }
+  svg {
+    color: #fff;
+    width: 15px;
+  }
+  @media screen and (max-width: 1024px) {
+    right: 15px;
+    margin-top: -12px;
+    strong {
+      display: none;
+    }
+    svg {
+      width: 30px;
+    }
+  }
 `;
 
 export default Header;
