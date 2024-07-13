@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 
 import OuterLayOutWrap from "../../components/common/OuterLayout";
 import InnerContent from "../../components/common/InnerContent";
@@ -11,7 +10,7 @@ import BtnReload from "../../components/common/BtnReload";
 import TableCommon from "../../components/common/TableCommon";
 import Btn2wayBottom from "../../components/common/Btn2wayBottom";
 
-function AllMemberGroup() {
+function DeductionStatus() {
   return (
     <OuterLayOutWrap>
       <TopTab />
@@ -35,14 +34,7 @@ function AllMemberGroup() {
         </ContentHeader>
         <ContentBottom>
           <TableCommon />
-          <Btn2wayBottom
-            firstBtnType=""
-            firstBtnBgColor="gray"
-            firstBtnText="탈퇴"
-            secondBtnType=""
-            secondBtnBgColor="navy"
-            secondBtnText="출력"
-          />
+          <Btn2wayBottom />
         </ContentBottom>
       </InnerContent>
     </OuterLayOutWrap>
@@ -53,4 +45,5 @@ const TableFilterBox = styled.div`
   display: flex;
   gap: 20px;
 `;
-export default AllMemberGroup;
+
+export default DeductionStatus;

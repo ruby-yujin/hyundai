@@ -45,13 +45,17 @@ const HeaderWrap = styled.header`
 `;
 
 const BtnNav = styled.button`
-  position: absolute;
-  top: 50%;
-  left: 15px;
-  margin-top: -16px;
-  svg {
-    color: #fff;
-    width: 30px;
+  display: none;
+  @media screen and (max-width: 1024px) {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    margin-top: -16px;
+    svg {
+      color: #fff;
+      width: 30px;
+    }
   }
 `;
 

@@ -1,11 +1,22 @@
 import React from "react";
 import styled from "styled-components";
 
-function Btn2wayBottom() {
+function Btn2wayBottom({
+  firstBtnText,
+  firstBtnType,
+  firstBtnBgColor,
+  secondBtnText,
+  secondBtnType,
+  secondBtnBgColor
+}) {
   return (
     <Btn2wayBottomWrap>
-      <BtnGray type="">탈퇴</BtnGray>
-      <BtnNavy type="">출력</BtnNavy>
+      <Btn2Way type={firstBtnType} className={firstBtnBgColor}>
+        {firstBtnText}
+      </Btn2Way>
+      <Btn2Way type={secondBtnType} className={secondBtnBgColor}>
+        {secondBtnText}
+      </Btn2Way>
     </Btn2wayBottomWrap>
   );
 }
@@ -18,7 +29,7 @@ const Btn2wayBottomWrap = styled.div`
   margin-top: 20px;
 `;
 
-const BtnGray = styled.button`
+const Btn2Way = styled.button`
   width: 50px;
   height: 24px;
   font-size: 1.2rem;
@@ -26,24 +37,20 @@ const BtnGray = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #666;
+  &.gray {
+    background: #666;
+  }
+  &.navy {
+    background: #1f3e74;
+  }
+  &.blue {
+    background: #295095;
+  }
+
   @media screen and (max-width: 1024px) {
     width: 46px;
     font-size: 1rem;
   }
 `;
-const BtnNavy = styled.button`
-  width: 50px;
-  height: 24px;
-  font-size: 1.2rem;
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #1f3e74;
-  @media screen and (max-width: 1024px) {
-    width: 46px;
-    font-size: 1rem;
-  }
-`;
+
 export default Btn2wayBottom;
