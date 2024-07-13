@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 
 import OuterLayOutWrap from "../../components/common/OuterLayout";
 import InnerContent from "../../components/common/InnerContent";
@@ -16,6 +17,7 @@ function DeductionStatus() {
       <TopTab />
       <InnerContent>
         <ContentHeader>
+          여기에 조회기간 추가해야지
           <TableFilterBox>
             <TableFilter
               filterId=""

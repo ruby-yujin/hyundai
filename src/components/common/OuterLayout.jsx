@@ -7,8 +7,7 @@ import Nav from "./Nav";
 function OuterLayout({ children }) {
   return (
     <OuterLayOutWrap>
-      <Header pageTitle="단체관리" />
-
+      <Header pageTitle= />
       <ContentGrid>
         <aside>
           <Nav />

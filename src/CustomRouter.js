@@ -7,6 +7,7 @@ import Register from "./pages/auth/Register";
 import ChangePassword from "./pages/auth/ChangePassword";
 import ChangePhone from "./pages/auth/ChangePhone";
 import AllMemberGroup from "./pages/member/AllMemberGroup";
+import DeductionStatus from "./pages/member/DeductionStatus";
 
 function CustomRouter() {
   return (
@@ -20,11 +21,12 @@ function CustomRouter() {
       {/* 전화번호 변경 */}
       <Route path={ROUTER_PATH.chagnePhone} element={<ChangePhone />} />
 
-      {/* 로그인후 단체관리 첫페이지 */}
+      {/* 로그인후 단체관리-첫페이지 */}
       <Route path={ROUTER_PATH.allMemberGroup} element={<AllMemberGroup />} />
 
-      {/* 단체별 공제현황 */}
-      <Route path={ROUTER_PATH.deductionStatus} element={<Login />} />
+      {/* 로그인후 단체관리-단체별 공제현황 */}
+      <Route path={ROUTER_PATH.deductionStatus} element={<DeductionStatus />} />
+
       {/* 단체 회원관리  */}
       <Route path={ROUTER_PATH.deductionStatusTotal} element={<Login />} />
 
