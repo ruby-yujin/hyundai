@@ -4,12 +4,12 @@ import styled from "styled-components";
 const AuthOuterLayout = ({ children }) => {
   return (
     <AuthOuterLayoutWrap>
-      <BuleBg
+      <BlueBg
         src="img/auth/bg.png"
         alt="파란배경 이미지"
         className="show-desktop"
       />
-      <BuleBgMobile
+      <BlueBgMobile
         src="img/auth/bg_m.png"
         alt="파란배경 이미지"
         className="show-mobile"
@@ -23,7 +23,7 @@ const AuthOuterLayoutWrap = styled.div`
   position: relative;
 `;
 
-const BuleBg = styled.img`
+const BlueBg = styled.img`
   position: absolute;
   top: 0;
   left: 0;
@@ -33,7 +33,7 @@ const BuleBg = styled.img`
   height: 100%;
 `;
 
-const BuleBgMobile = styled.img`
+const BlueBgMobile = styled.img`
   position: absolute;
   top: -19.7%;
   left: 0;
