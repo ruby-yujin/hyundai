@@ -27,8 +27,10 @@ const BuleBg = styled.img`
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
 `;
 
 const BuleBgMobile = styled.img`
@@ -36,8 +38,7 @@ const BuleBgMobile = styled.img`
   top: -19.7%;
   left: 0;
   width: 100%;
-  height: 100vh;
-  overflow: hidden;
+  height: 100%;
 `;
 
 export default AuthOuterLayout;
