@@ -3,21 +3,18 @@ import styled from "styled-components";
 
 import OuterLayOutWrap from "../../components/common/OuterLayout";
 import InnerContent from "../../components/common/InnerContent";
-import TopTab from "../../components/member/TopTab";
+import DropDown from "../../components/common/DropDown";
 import TableFilter from "../../components/common/TableSearchInput";
 import ContentHeader from "../../components/common/ContentHeader";
 import ContentBottom from "../../components/common/ContentBottom";
-import BtnReload from "../../components/common/BtnReload";
 import TableCommon from "../../components/common/TableCommon";
 import Btn2wayBottom from "../../components/common/Btn2wayBottom";
 
 function RegisterManagement() {
   return (
     <OuterLayOutWrap>
-      <TopTab />
+      <DropDown />
       <InnerContent>
-        {" "}
-        신청관리 관리자
         <ContentHeader>
           <TableFilterBox>
             <TableFilter
@@ -33,17 +30,16 @@ function RegisterManagement() {
               onChange={() => {}}
             />
           </TableFilterBox>
-          <BtnReload />
         </ContentHeader>
         <ContentBottom>
           <TableCommon />
           <Btn2wayBottom
             firstBtnType=""
-            firstBtnBgColor="gray"
-            firstBtnText="탈퇴"
+            firstBtnBgColor="blue"
+            firstBtnText="승인"
             secondBtnType=""
-            secondBtnBgColor="navy"
-            secondBtnText="출력"
+            secondBtnBgColor="gray"
+            secondBtnText="거부"
           />
         </ContentBottom>
       </InnerContent>
