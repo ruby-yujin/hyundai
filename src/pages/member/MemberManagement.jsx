@@ -43,8 +43,9 @@ function MemberManagement() {
             secondBtnBgColor="navy"
             secondBtnText="출력"
           />
-
-          <TableCommon />
+          <div style={{ marginTop: "3rem" }}>
+            <TableCommon />
+          </div>
         </ContentBottom>
       </InnerContent>
     </OuterLayOutWrap>

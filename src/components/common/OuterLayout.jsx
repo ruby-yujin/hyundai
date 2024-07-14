@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 import Header from "./Header";
 import Nav from "./Nav";
+import Footer from "./Footer";
 
 function OuterLayout({ children }) {
   return (
@@ -19,6 +20,7 @@ function OuterLayout({ children }) {
           </Content>
         </section>
       </ContentGrid>
+      <Footer />
     </OuterLayOutWrap>
   );
 }
@@ -27,6 +29,7 @@ const OuterLayOutWrap = styled.div``;
 
 const ContentGrid = styled.main`
   position: relative;
+  min-height: calc(100vh - 60px);
   aside {
     width: 300px;
     position: absolute;

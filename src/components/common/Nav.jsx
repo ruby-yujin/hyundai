@@ -85,7 +85,7 @@ function Nav() {
 
 const NavWrap = styled.nav`
   width: 300px;
-  height: 100vh;
+  min-height: calc(100vh - 60px);
   background: #1f3e74;
   box-shadow: 14px -11px 5px -11px rgba(0, 0, 0, 0.4);
 `;
