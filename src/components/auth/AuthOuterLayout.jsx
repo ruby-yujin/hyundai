@@ -33,7 +33,7 @@ const BuleBg = styled.img`
 
 const BuleBgMobile = styled.img`
   position: absolute;
-  top: -215px;
+  top: -19.7%;
   left: 0;
   width: 100%;
   height: 100vh;

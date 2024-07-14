@@ -21,9 +21,9 @@ function CustomRouter() {
       {/* 시스템사용등록 */}
       <Route path={ROUTER_PATH.register} element={<Register />} />
       {/* 비밀번호 변경 */}
-      <Route path={ROUTER_PATH.chagnePassword} element={<ChangePassword />} />
+      <Route path={ROUTER_PATH.changePassword} element={<ChangePassword />} />
       {/* 전화번호 변경 */}
-      <Route path={ROUTER_PATH.chagnePhone} element={<ChangePhone />} />
+      <Route path={ROUTER_PATH.changePhone} element={<ChangePhone />} />
 
       {/*  로그인후  */}
       {/* 단체관리 - 첫페이지 */}

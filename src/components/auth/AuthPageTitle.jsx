@@ -30,16 +30,16 @@ const AuthPageTitleWrap = styled.div`
 
   @media screen and (max-width: 1024px) {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 3.8rem;
     img {
-      width: 100px;
+      width: 7rem;
     }
     h1 {
-      font-size: 4rem;
+      font-size: 3.4rem;
       margin: 20px 0 10px;
     }
     p {
-      font-size: 2.5rem;
+      font-size: 2.4rem;
     }
   }
 `;

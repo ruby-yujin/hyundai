@@ -31,11 +31,11 @@ const ConfirmNumberWrap = styled.div`
     width: 94%;
     display: flex;
     justify-content: space-between;
-    margin: 45px auto 25%;
+    margin: 45px auto 15%;
     input {
       width: calc(100% - 100px);
       height: 45px;
-      font-size: 2rem;
+      font-size: 1.5rem;
       margin-bottom: 0;
       margin-left: 10px;
       &:first-child {

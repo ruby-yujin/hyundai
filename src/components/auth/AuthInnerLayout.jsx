@@ -15,8 +15,10 @@ const AuthInnerLayoutWrap = styled.div`
   align-items: center;
 
   @media screen and (max-width: 1024px) {
-    padding: 60px 4% 0;
+    height: 100%;
+    padding: 30px 4%;
     flex-direction: column;
+    overflow-y: scroll;
   }
 `;
 
