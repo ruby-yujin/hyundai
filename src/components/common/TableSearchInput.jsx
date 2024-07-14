@@ -1,18 +1,18 @@
 import React from "react";
 import styled from "styled-components";
 
-function TableFilter({ filterId, labelText, value, onChange }) {
+function TableSearchInput({ filterId, labelText, value, onChange }) {
   return (
-    <FilterGroup>
+    <SearchGroup>
       <label htmlFor={labelText} id={filterId}>
         {labelText}
       </label>
       <input type="text" maxLength={"100"} value={value} onChange={onChange} />
-    </FilterGroup>
+    </SearchGroup>
   );
 }
 
-const FilterGroup = styled.div`
+const SearchGroup = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,4 +37,4 @@ const FilterGroup = styled.div`
   }
 `;
 
-export default TableFilter;
+export default TableSearchInput;

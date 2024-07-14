@@ -7,7 +7,7 @@ import Nav from "./Nav";
 function OuterLayout({ children }) {
   return (
     <OuterLayOutWrap>
-      <Header pageTitle= />
+      <Header />
       <ContentGrid>
         <aside>
           <Nav />
@@ -32,6 +32,7 @@ const ContentGrid = styled.main`
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 100;
   }
   section {
     margin-left: 300px;

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { Link, useLocation } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
@@ -7,12 +7,13 @@ import { useNav } from "../../context/useNav";
 
 const NavItem = ({ category, isActive, onClick, currentPath }) => (
   <li>
-    <StyledButton
-      onClick={onClick}
-      className={isActive ? "active" : ""}
-      isMember={category.id === "member"}
+    <NavLink
+      to={category.menu.path}
+      className={`${isActive ? "active" : ""} ${
+        category.id === "member" ? "member" : ""
+      }`}
     >
-      {category.menu}
+      {category.menu.name}
       {category.id === "member" && (
         <>
           <ArrowWrap $isOpen={isActive}>
@@ -21,18 +22,18 @@ const NavItem = ({ category, isActive, onClick, currentPath }) => (
           <TailImg $isOpen={isActive} src="/img/tail.png" alt="tail" />
         </>
       )}
-    </StyledButton>
+    </NavLink>
 
-    {isActive && (
+    {isActive && category.twoDepthRoute && (
       <SubMenu>
-        {category.route.map((route) => (
+        {category.twoDepthRoute.map((route) => (
           <li key={route.path}>
-            <StyledLink
+            <SubNavLink
               to={route.path}
               className={currentPath === route.path ? "active" : ""}
             >
               {route.name}
-            </StyledLink>
+            </SubNavLink>
           </li>
         ))}
       </SubMenu>
@@ -45,8 +46,23 @@ function Nav() {
   const [activeCategory, setActiveCategory] = useState(null);
   const location = useLocation();
 
-  const toggleCategory = (categoryId) =>
+  useEffect(() => {
+    const currentCategory = CATEGORY_INFOS.find(
+      (category) =>
+        category.menu.path === location.pathname ||
+        (category.twoDepthRoute &&
+          category.twoDepthRoute.some(
+            (route) => route.path === location.pathname
+          ))
+    );
+    if (currentCategory) {
+      setActiveCategory(currentCategory.id);
+    }
+  }, [location.pathname]);
+
+  const toggleCategory = (categoryId) => {
     setActiveCategory((prev) => (prev === categoryId ? null : categoryId));
+  };
 
   if (!isNavVisible) return null;
 
@@ -72,16 +88,13 @@ const NavWrap = styled.nav`
   height: 100vh;
   background: #1f3e74;
   box-shadow: 14px -11px 5px -11px rgba(0, 0, 0, 0.4);
-  @media screen and (max-width: 1024px) {
-    /* display: none; */
-  }
 `;
 
 const MainMenu = styled.ul`
   width: 100%;
 `;
 
-const StyledButton = styled.button`
+const NavLink = styled(Link)`
   color: #fff;
   font-size: 1.7rem;
   padding: 10px;
@@ -92,8 +105,26 @@ const StyledButton = styled.button`
   align-items: center;
   font-weight: 500;
   position: relative;
+  text-decoration: none;
   background: ${(props) =>
-    props.className === "active" ? "#295095" : "transparent"};
+    props.className.includes("active") ? "#295095" : "transparent"};
+`;
+
+const SubNavLink = styled(Link)`
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #666666;
+  font-size: 1.7rem;
+  background: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  &.active {
+    background: #f0f0f0;
+    font-weight: bold;
+  }
 `;
 
 const ArrowWrap = styled.span`
@@ -111,22 +142,6 @@ const TailImg = styled.img`
 
 const SubMenu = styled.ul`
   width: 100%;
-`;
-
-const StyledLink = styled(Link)`
-  width: 100%;
-  height: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #666666;
-  font-size: 1.7rem;
-  background: #fff;
-  font-weight: 500;
-  &.active {
-    background: #f0f0f0;
-    font-weight: bold;
-  }
 `;
 
 export default Nav;

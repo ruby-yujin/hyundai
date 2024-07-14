@@ -11,12 +11,14 @@ import BtnReload from "../../components/common/BtnReload";
 import TableCommon from "../../components/common/TableCommon";
 import Btn2wayBottom from "../../components/common/Btn2wayBottom";
 
-function AllMemberGroup() {
+function RegisterManagement() {
   return (
     <OuterLayOutWrap>
       <TopTab />
       <InnerContent>
-        <ContentHeader colstyle="content-header-col">
+        {" "}
+        신청관리 관리자
+        <ContentHeader>
           <TableFilterBox>
             <TableFilter
               filterId=""
@@ -53,4 +55,4 @@ const TableFilterBox = styled.div`
   display: flex;
   gap: 20px;
 `;
-export default AllMemberGroup;
+export default RegisterManagement;

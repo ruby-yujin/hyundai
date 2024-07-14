@@ -11,7 +11,7 @@ import BtnReload from "../../components/common/BtnReload";
 import TableCommon from "../../components/common/TableCommon";
 import Btn2wayBottom from "../../components/common/Btn2wayBottom";
 
-function AllMemberGroup() {
+function MemberManagement() {
   return (
     <OuterLayOutWrap>
       <TopTab />
@@ -37,12 +37,14 @@ function AllMemberGroup() {
           <TableCommon />
           <Btn2wayBottom
             firstBtnType=""
-            firstBtnBgColor="gray"
-            firstBtnText="탈퇴"
+            firstBtnBgColor="blue"
+            firstBtnText="조회"
             secondBtnType=""
             secondBtnBgColor="navy"
             secondBtnText="출력"
           />
+
+          <TableCommon />
         </ContentBottom>
       </InnerContent>
     </OuterLayOutWrap>
@@ -53,4 +55,5 @@ const TableFilterBox = styled.div`
   display: flex;
   gap: 20px;
 `;
-export default AllMemberGroup;
+
+export default MemberManagement;

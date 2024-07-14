@@ -8,6 +8,10 @@ import ChangePassword from "./pages/auth/ChangePassword";
 import ChangePhone from "./pages/auth/ChangePhone";
 import AllMemberGroup from "./pages/member/AllMemberGroup";
 import DeductionStatus from "./pages/member/DeductionStatus";
+import DeductionStatusTotal from "./pages/member/DeductionStatusTotal";
+import MemberManagement from "./pages/member/MemberManagement";
+import MemberRegister from "./pages/member/MemberRegister";
+import RegisterManagement from "./pages/register/RegisterManagement";
 
 function CustomRouter() {
   return (
@@ -21,18 +25,29 @@ function CustomRouter() {
       {/* 전화번호 변경 */}
       <Route path={ROUTER_PATH.chagnePhone} element={<ChangePhone />} />
 
-      {/* 로그인후 단체관리-첫페이지 */}
+      {/*  로그인후  */}
+      {/* 단체관리 - 첫페이지 */}
       <Route path={ROUTER_PATH.allMemberGroup} element={<AllMemberGroup />} />
-
-      {/* 로그인후 단체관리-단체별 공제현황 */}
+      {/* 단체관리 - 단체별 공제현황 */}
       <Route path={ROUTER_PATH.deductionStatus} element={<DeductionStatus />} />
+      {/* 단체관리 - 단체별 공제 집계 현황 */}
+      <Route
+        path={ROUTER_PATH.deductionStatusTotal}
+        element={<DeductionStatusTotal />}
+      />
+      {/* 단체관리 - 단체 회원관리 */}
+      <Route
+        path={ROUTER_PATH.memberManagement}
+        element={<MemberManagement />}
+      />
+      {/* 단체관리 - 단체 가입신청 */}
+      <Route path={ROUTER_PATH.memberRegister} element={<MemberRegister />} />
 
-      {/* 단체 회원관리  */}
-      <Route path={ROUTER_PATH.deductionStatusTotal} element={<Login />} />
-
-      {/* {ROUTER_INFOS.map((info, index) => (
-        <Route key={index} path={info.path} element={info.element} />
-      ))} */}
+      {/* 신청 관리(관리자) -  */}
+      <Route
+        path={ROUTER_PATH.registerManagement}
+        element={<RegisterManagement />}
+      />
     </Routes>
   );
 }

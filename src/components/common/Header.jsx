@@ -1,17 +1,24 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
 import styled from "styled-components";
 import { AlignJustify, LogOut } from "lucide-react";
-import { useNav } from "../../context/useNav";
 
-function Header({ pageTitle }) {
+import { useNav } from "../../context/useNav";
+import { HEADER_TITLE } from "../../constants/constants";
+
+function Header() {
   const { toggleNav } = useNav();
+  const location = useLocation();
+
+  const currentPageTitle =
+    HEADER_TITLE.find((item) => item.path === location.pathname)?.title || "";
 
   return (
     <HeaderWrap>
       <BtnNav onClick={toggleNav}>
         <AlignJustify size={32} />
       </BtnNav>
-      <h1>{pageTitle}</h1>
+      <h1>{currentPageTitle}</h1>
       <BtnLogout>
         <strong>로그아웃</strong>
         <LogOut />

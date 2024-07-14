@@ -13,13 +13,13 @@ import Btn2wayBottom from "../../components/common/Btn2wayBottom";
 import BtnPeriod from "../../components/common/BtnPeriod";
 import DatePickerStyle from "../../components/common/DatePickerStyle";
 
-function DeductionStatus() {
+function DeductionStatusTotal() {
   return (
     <OuterLayOutWrap>
       <TopTab />
       <InnerContent>
-        <ContentHeader className="">
-          <TableFilterBox>
+        <ContentHeader>
+          <TableFilterBox className="">
             <BtnPeriod />
             <DatePickerStyle />
           </TableFilterBox>
@@ -74,4 +74,4 @@ const Flexbox = styled.div`
   gap: 20px;
 `;
 
-export default DeductionStatus;
+export default DeductionStatusTotal;
