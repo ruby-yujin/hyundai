@@ -5,10 +5,11 @@ import { Formik } from "formik";
 import { AuthFormWrap } from "./LoginForm";
 import InputGroup from "../common/InputGroup";
 import BtnSubmit from "./BtnSubmit";
+import { BtnWrap } from "./LoginForm";
 
 const initialValues = { memberNumber: "", memberPhone: "", memberPassword: "" };
 
-const ChangePhone = () => {
+const ChangePhoneForm = () => {
   return (
     <AuthFormWrap>
       <Formik initialValues={initialValues} onSubmit={() => {}}>
@@ -51,8 +52,4 @@ const ChangePhone = () => {
   );
 };
 
-const BtnWrap = styled.div`
-  margin-top: 20%;
-`;
-
-export default ChangePhone;
+export default ChangePhoneForm;

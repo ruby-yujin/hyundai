@@ -5,6 +5,7 @@ import { Formik } from "formik";
 import { AuthFormWrap } from "./LoginForm";
 import InputGroup from "../common/InputGroup";
 import BtnSubmit from "./BtnSubmit";
+import { BtnWrap } from "./LoginForm";
 
 const initialValues = { memberNumber: "", memberPhone: "", memberPassword: "" };
 
@@ -57,9 +58,5 @@ const RegisterForm = () => {
     </AuthFormWrap>
   );
 };
-
-const BtnWrap = styled.div`
-  margin-top: 10%;
-`;
 
 export default RegisterForm;

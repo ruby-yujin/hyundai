@@ -3,7 +3,7 @@ import React, { createContext, useState, useContext, useEffect } from "react";
 const NavContext = createContext();
 
 export const NavProvider = ({ children }) => {
-  const [isNavVisible, setIsNavVisible] = useState(true);
+  const [isNavVisible, setIsNavVisible] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 1024);
 
   useEffect(() => {

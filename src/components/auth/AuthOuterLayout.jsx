@@ -21,10 +21,11 @@ const AuthOuterLayout = ({ children }) => {
 
 const AuthOuterLayoutWrap = styled.div`
   position: relative;
+  height: 100%;
 `;
 
 const BlueBg = styled.img`
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -34,7 +35,7 @@ const BlueBg = styled.img`
 `;
 
 const BlueBgMobile = styled.img`
-  position: absolute;
+  position: fixed;
   top: -19.7%;
   left: 0;
   width: 100%;

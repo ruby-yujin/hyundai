@@ -9,7 +9,7 @@ const AuthInnerLayoutWrap = styled.div`
   position: relative;
   max-width: 1560px;
   margin: 0 auto;
-  padding: 80px 1% 0;
+  padding: 6.2rem 1%;
   display: flex;
   justify-content: space-between;
   align-items: center;

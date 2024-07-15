@@ -32,6 +32,7 @@ const SearchGroup = styled.div`
   }
   @media screen and (max-width: 1024px) {
     label {
+      font-size: 1.3rem;
       color: #666;
     }
   }

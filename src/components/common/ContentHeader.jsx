@@ -16,6 +16,10 @@ const ContentHeaderWrap = styled.div`
   }
   @media screen and (max-width: 1024px) {
     padding: 2rem 1rem;
+    &.content-header-col {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 `;
 

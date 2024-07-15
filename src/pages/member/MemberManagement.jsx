@@ -55,6 +55,9 @@ function MemberManagement() {
 const TableFilterBox = styled.div`
   display: flex;
   gap: 20px;
+  @media screen and (max-width: 1024px) {
+    gap: 10px;
+  }
 `;
 
 export default MemberManagement;

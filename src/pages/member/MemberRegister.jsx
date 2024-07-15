@@ -17,7 +17,6 @@ function MemberRegister() {
       <TopTab />
       <InnerContent>
         <ContentHeader>
-          단체가입신청
           <TableFilterBox>
             <TableFilter
               filterId=""

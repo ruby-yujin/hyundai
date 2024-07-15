@@ -2,7 +2,7 @@ import React from "react";
 import AuthOuterLayout from "../../components/auth/AuthOuterLayout";
 import AuthInnerLayout from "../../components/auth/AuthInnerLayout";
 import AuthPageTitle from "../../components/auth/AuthPageTitle";
-import ChangePhone from "../../components/auth/ChangePhone";
+import ChangePhoneForm from "../../components/auth/ChangePhoneForm";
 
 function ChangePassword() {
   return (
@@ -12,7 +12,7 @@ function ChangePassword() {
           title="현대중공업-새마을금고"
           description="휴대폰번호 변경"
         />
-        <ChangePhone />
+        <ChangePhoneForm />
       </AuthInnerLayout>
     </AuthOuterLayout>
   );

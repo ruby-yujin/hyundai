@@ -57,8 +57,9 @@ const LoginForm = () => {
             <ErrorMessage name="loginMemberPassword" component={ErrorText} />
 
             <ConfirmNumber />
-
-            <BtnSubmit type="submit" text="Login" disabled={isSubmitting} />
+            <BtnWrap>
+              <BtnSubmit type="submit" text="Login" disabled={isSubmitting} />
+            </BtnWrap>
           </Form>
         )}
       </Formik>
@@ -82,6 +83,21 @@ const ErrorText = styled.div`
   margin-top: -10px;
   margin-bottom: 10px;
   padding-left: 30px;
+`;
+
+export const BtnWrap = styled.div`
+  margin-top: 10%;
+  @media screen and (max-width: 1024px) {
+    max-width: 500px;
+    margin: 0 auto;
+    position: fixed;
+    bottom: 9rem;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    padding: 0 1rem;
+  }
 `;
 
 export default LoginForm;
