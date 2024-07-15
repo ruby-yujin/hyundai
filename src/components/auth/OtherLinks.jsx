@@ -68,6 +68,9 @@ const Line = styled.span`
   display: block;
   width: 1px;
   height: 16px;
+  @media screen and (max-width: 1024px) {
+    background: #fff;
+  }
   background: #000;
 `;
 
