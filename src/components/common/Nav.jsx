@@ -5,41 +5,59 @@ import { ChevronRight } from "lucide-react";
 import { CATEGORY_INFOS } from "../../constants/constants";
 import { useNav } from "../../context/useNav";
 
-const NavItem = ({ category, isActive, onClick, currentPath }) => (
-  <li>
-    <NavLink
-      to={category.menu.path}
-      className={`${isActive ? "active" : ""} ${
-        category.id === "member" ? "member" : ""
-      }`}
-    >
-      {category.menu.name}
-      {category.id === "member" && (
-        <>
-          <ArrowWrap $isOpen={isActive}>
-            <ChevronRight />
-          </ArrowWrap>
-          <TailImg $isOpen={isActive} src="/img/tail.png" alt="tail" />
-        </>
-      )}
-    </NavLink>
+const NavItem = ({ category, activeCategory, onClick, currentPath }) => {
+  const isActive = activeCategory === category.id;
+  const [isSubMenuOpen, setIsSubMenuOpen] = useState(isActive);
 
-    {isActive && category.twoDepthRoute && (
-      <SubMenu>
-        {category.twoDepthRoute.map((route) => (
-          <li key={route.path}>
-            <SubNavLink
-              to={route.path}
-              className={currentPath === route.path ? "active" : ""}
-            >
-              {route.name}
-            </SubNavLink>
-          </li>
-        ))}
-      </SubMenu>
-    )}
-  </li>
-);
+  useEffect(() => {
+    setIsSubMenuOpen(isActive);
+  }, [isActive]);
+
+  const handleClick = (e) => {
+    if (category.twoDepthRoute && category.twoDepthRoute.length > 0) {
+      e.preventDefault();
+      setIsSubMenuOpen(!isSubMenuOpen);
+    }
+    onClick(category.id);
+  };
+
+  return (
+    <li>
+      <NavLink
+        to={category.menu.path}
+        className={`${isActive ? "active" : ""} ${
+          category.id === "member" ? "member" : ""
+        }`}
+        onClick={handleClick}
+      >
+        {category.menu.name}
+        {category.twoDepthRoute && category.twoDepthRoute.length > 0 && (
+          <>
+            <ArrowWrap $isOpen={isSubMenuOpen}>
+              <ChevronRight />
+            </ArrowWrap>
+            <TailImg $isOpen={isSubMenuOpen} src="/img/tail.png" alt="tail" />
+          </>
+        )}
+      </NavLink>
+
+      {category.twoDepthRoute && category.twoDepthRoute.length > 0 && (
+        <SubMenu $isOpen={isSubMenuOpen}>
+          {category.twoDepthRoute.map((route) => (
+            <li key={route.path}>
+              <SubNavLink
+                to={route.path}
+                className={currentPath === route.path ? "active" : ""}
+              >
+                {route.name}
+              </SubNavLink>
+            </li>
+          ))}
+        </SubMenu>
+      )}
+    </li>
+  );
+};
 
 function Nav() {
   const { isNavVisible } = useNav();
@@ -61,7 +79,7 @@ function Nav() {
   }, [location.pathname]);
 
   const toggleCategory = (categoryId) => {
-    setActiveCategory((prev) => (prev === categoryId ? null : categoryId));
+    setActiveCategory(categoryId);
   };
 
   if (!isNavVisible) return null;
@@ -73,8 +91,8 @@ function Nav() {
           <NavItem
             key={category.id}
             category={category}
-            isActive={activeCategory === category.id}
-            onClick={() => toggleCategory(category.id)}
+            activeCategory={activeCategory}
+            onClick={toggleCategory}
             currentPath={location.pathname}
           />
         ))}
@@ -142,6 +160,9 @@ const TailImg = styled.img`
 
 const SubMenu = styled.ul`
   width: 100%;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  height: ${(props) => (props.$isOpen ? "240px" : "0")};
 `;
 
 export default Nav;

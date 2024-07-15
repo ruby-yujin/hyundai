@@ -16,7 +16,7 @@ function MemberRegister() {
     <OuterLayOutWrap>
       <TopTab />
       <InnerContent>
-        <ContentHeader>
+        <ContentHeader colstyle="content-header-col">
           <TableFilterBox>
             <TableFilter
               filterId=""
