@@ -78,7 +78,7 @@ export const AuthFormWrap = styled.div`
 `;
 
 const ErrorText = styled.div`
-  color: #fff;
+  color: #f8fc12;
   font-size: 1.2rem;
   margin-top: -10px;
   margin-bottom: 10px;
@@ -91,7 +91,7 @@ export const BtnWrap = styled.div`
     max-width: 500px;
     margin: 0 auto;
     position: fixed;
-    bottom: 9rem;
+    bottom: 8rem;
     left: 0;
     right: 0;
     display: flex;

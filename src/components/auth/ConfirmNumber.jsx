@@ -12,7 +12,7 @@ const ConfirmNumber = () => {
 
 const ConfirmNumberWrap = styled.div`
   width: 300px;
-  margin: 45px auto 0;
+  margin: 3rem auto;
   input {
     width: 100%;
     height: 70px;
@@ -31,7 +31,7 @@ const ConfirmNumberWrap = styled.div`
     width: 94%;
     display: flex;
     justify-content: space-between;
-    margin: 45px auto 15%;
+    margin: 2rem auto 3rem;
     input {
       width: calc(100% - 100px);
       height: 45px;
