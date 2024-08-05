@@ -15,48 +15,45 @@ const initialValues = {
 };
 
 const LoginForm = () => {
-  const handleSubmit = (values, { setSubmitting }) => {
+  const handleSubmit = (values) => {
     console.log(values);
-    setSubmitting(false);
   };
 
   return (
     <AuthFormWrap>
       <Formik
         initialValues={initialValues}
-        // validationSchema={LoginSchema}
+        validationSchema={LoginSchema}
         onSubmit={handleSubmit}
+        validateOnChange={false}
+        validateOnBlur={false}
       >
-        {({ isSubmitting }) => (
+        {() => (
           <Form>
             <InputGroup
-              type="text"
+              inputType="text"
               name="loginMemberId"
               placeholder="아이디를 입력해주세요"
             />
             <ErrorMessage name="loginMemberId" component={ErrorText} />
 
             <InputGroup
-              type="text"
+              inputType="text"
               name="loginMemberPhone"
               placeholder="휴대폰 번호를 입력해주세요"
             />
             <ErrorMessage name="loginMemberPhone" component={ErrorText} />
 
             <InputGroup
-              type="password"
+              inputType="password"
               name="loginMemberPassword"
               placeholder="비밀번호를 입력해주세요"
             />
             <ErrorMessage name="loginMemberPassword" component={ErrorText} />
 
-            <ConfirmNumber />
+            <ConfirmNumber name="loginConfirmNumber" component={ErrorText} />
             <BtnWrap>
-              <BtnSubmit
-                type="submit"
-                text="로그인"
-                disabled={isSubmitting}
-              ></BtnSubmit>
+              <BtnSubmit type="submit" text="로그인"></BtnSubmit>
             </BtnWrap>
             <OtherLinks />
           </Form>

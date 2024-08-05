@@ -1,11 +1,18 @@
 import React from "react";
 import styled from "styled-components";
+import { Field, ErrorMessage } from "formik";
 
 const ConfirmNumber = () => {
   return (
     <ConfirmNumberWrap>
-      <input type="text" defaultValue="045645" />
-      <input type="text" placeholder="숫자 6자리를 입력해주세요" />
+      <input type="text" defaultValue="045645" readOnly />
+      <Field
+        type="text"
+        name="loginConfirmNumber"
+        placeholder="숫자 6자리를 입력해주세요"
+        as="input"
+      />
+      <ErrorMessage name="loginConfirmNumber" component={ErrorText} />
     </ConfirmNumberWrap>
   );
 };
@@ -45,6 +52,13 @@ const ConfirmNumberWrap = styled.div`
       }
     }
   }
+`;
+
+const ErrorText = styled.div`
+  color: #f8fc12;
+  font-size: 1.2rem;
+  margin-top: 5px;
+  text-align: center;
 `;
 
 export default ConfirmNumber;
