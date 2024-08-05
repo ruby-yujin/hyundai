@@ -3,39 +3,35 @@ import styled from "styled-components";
 
 import OuterLayOutWrap from "../../components/common/OuterLayout";
 import InnerContent from "../../components/common/InnerContent";
-import TopTab from "../../components/member/TopTab";
-import TableFilter from "../../components/common/TableSearchInput";
+import DropDown from "../../components/common/DropDown";
 import ContentHeader from "../../components/common/ContentHeader";
 import ContentBottom from "../../components/common/ContentBottom";
 import BtnReload from "../../components/common/BtnReload";
 import TableCommon from "../../components/common/TableCommon";
-import Btn2wayBottom from "../../components/common/Btn2wayBottom";
+import Btn3wayBottom from "../../components/common/Btn3wayBottom";
 
 function MemberRegister() {
   return (
     <OuterLayOutWrap>
-      <TopTab />
+      <DropDown />
       <InnerContent>
         <ContentHeader colstyle="content-header-col">
-          <TableFilterBox>
-            <TableFilter
-              filterId=""
-              labelText={"총 가입단체 수 : "}
-              value={0}
-              onChange={() => {}}
-            />
-            <TableFilter
-              filterId=""
-              labelText={"현재 가입단체 수 : "}
-              value={0}
-              onChange={() => {}}
-            />
-          </TableFilterBox>
+          <TableFilterBox></TableFilterBox>
           <BtnReload />
         </ContentHeader>
         <ContentBottom>
           <TableCommon />
-          <Btn2wayBottom />
+          <Btn3wayBottom
+            firstBtnType=""
+            firstBtnBgColor="blue"
+            firstBtnText="신청"
+            secondBtnType=""
+            secondBtnBgColor="gray"
+            secondBtnText="취소"
+            thirdBtnType=""
+            thirdBtnBgColor="light-gray"
+            thirdBtnText="출력"
+          />
         </ContentBottom>
       </InnerContent>
     </OuterLayOutWrap>
