@@ -18,7 +18,6 @@ const AuthPageTitle = ({ title, description }) => {
 
 const AuthPageTitleWrap = styled.div`
   position: relative;
-  z-index: 1;
   color: #fff;
   img {
     width: 200px;
