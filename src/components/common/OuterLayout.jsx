@@ -35,7 +35,6 @@ const ContentGrid = styled.main`
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 100;
   }
   section {
     margin-left: 300px;

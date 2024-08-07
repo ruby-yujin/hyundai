@@ -31,7 +31,6 @@ const HeaderWrap = styled.header`
   height: 60px;
   background: #1f3e74;
   position: relative;
-  z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;

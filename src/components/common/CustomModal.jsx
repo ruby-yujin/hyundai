@@ -24,19 +24,33 @@ const customStyles = {
 
 const CustomModal = ({ isOpen, closeModal, children }) => {
   return (
-    <CustomModalWrap>
-      <ReactModal
-        isOpen={isOpen}
-        onRequestClose={closeModal}
-        style={customStyles}
-        contentLabel="Example Modal"
-      >
-        {children}
-      </ReactModal>
-    </CustomModalWrap>
+    <ReactModal
+      isOpen={isOpen}
+      onRequestClose={closeModal}
+      style={customStyles}
+      contentLabel="Example Modal"
+    >
+      {children}
+      <BtnModalClose onClick={closeModal}>
+        <X />
+      </BtnModalClose>
+    </ReactModal>
   );
 };
 
-const CustomModalWrap = styled.div``;
+const BtnModalClose = styled.button`
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+
+  &:hover {
+    color: #000;
+  }
+`;
 
 export default CustomModal;
