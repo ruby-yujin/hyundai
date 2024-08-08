@@ -89,6 +89,9 @@ const TableCommonWrap = styled.div`
       font-size: 1.4rem;
       border-left: 1px solid #e2e2e2;
       border-bottom: 1px solid #e2e2e2;
+      &.red {
+        color: red;
+      }
       &:first-child {
         border-left: none;
       }

@@ -21,6 +21,10 @@ const DropDownWrap = styled.div`
   gap: 10px;
   select {
     width: 300px;
+    border: 1px solid #8f8f8f;
+  }
+  @media screen and (max-width: 1024px) {
+    padding: 2.5rem 1rem 1rem;
   }
 `;
 const BtnSearch = styled.div`

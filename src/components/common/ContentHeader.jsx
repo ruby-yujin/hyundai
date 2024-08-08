@@ -19,6 +19,7 @@ const ContentHeaderWrap = styled.div`
     &.content-header-col {
       flex-direction: column;
       align-items: flex-start;
+      padding: 2rem 1rem 1rem;
     }
   }
 `;

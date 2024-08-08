@@ -47,6 +47,7 @@ const ContentGrid = styled.main`
       /* display: none; */
     }
     section {
+      padding-top: 10px;
       margin-left: 0;
       width: 100%;
     }
