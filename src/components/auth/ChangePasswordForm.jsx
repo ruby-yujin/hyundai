@@ -26,50 +26,53 @@ const ChangePasswordForm = () => {
         initialValues={initialValues}
         validationSchema={ChangePwSchema}
         onSubmit={handleSubmit}
-        validateOnChange={false}
-        validateOnBlur={false}
       >
         {({ isSubmitting }) => (
           <Form>
             <InputGroup
+              type="text"
               name="memberNumber"
-              labelText="사원번호"
-              inputType="text"
-              placeholder="F00000"
-              disabled={true}
+              placeholder="회원번호"
+              disabled
             />
+            <ErrorMessage name="memberNumber" component={ErrorText} />
+
             <InputGroup
+              type="text"
               name="memberName"
-              labelText="사원명"
-              inputType="text"
-              disabled={true}
+              placeholder="이름"
+              disabled
             />
+            <ErrorMessage name="memberName" component={ErrorText} />
+
             <InputGroup
+              type="text"
               name="memberPhone"
-              labelText="휴대폰번호"
-              inputType="text"
-              disabled={true}
+              placeholder="휴대폰 번호"
+              disabled
             />
+            <ErrorMessage name="memberPhone" component={ErrorText} />
+
             <InputGroup
-              name="memberPassword"
-              labelText="새 비밀번호"
               inputType="password"
-              placeholder="새 비밀번호를 입력해주세요."
-              disabled={false}
+              name="memberPassword"
+              placeholder="새 비밀번호"
             />
             <ErrorMessage name="memberPassword" component={ErrorText} />
 
             <InputGroup
-              name="memberPasswordConfirm"
-              labelText="비밀번호 확인"
               inputType="password"
-              placeholder="새 비밀번호를 입력해주세요."
-              disabled={false}
+              name="memberPasswordConfirm"
+              placeholder="새 비밀번호 확인"
             />
             <ErrorMessage name="memberPasswordConfirm" component={ErrorText} />
 
             <BtnWrap>
-              <BtnSubmit type="submit" text="비밀번호 변경" />
+              <BtnSubmit
+                type="submit"
+                disabled={isSubmitting}
+                text="비밀번호 변경"
+              />
             </BtnWrap>
           </Form>
         )}

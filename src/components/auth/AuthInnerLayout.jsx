@@ -18,7 +18,7 @@ const AuthInnerLayoutWrap = styled.div`
     height: 100%;
     padding: 30px 4%;
     flex-direction: column;
-    overflow-y: scroll;
+    overflow-y: hidden;
   }
 `;
 

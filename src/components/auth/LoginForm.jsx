@@ -1,22 +1,23 @@
 import React from "react";
 import styled from "styled-components";
-import { Formik, Form, ErrorMessage } from "formik";
+import { Formik, Form, Field, ErrorMessage } from "formik";
 import { LoginSchema } from "../../schema/formSchema";
 
 import InputGroup from "../common/InputGroup";
 import OtherLinks from "./OtherLinks";
-import ConfirmNumber from "./ConfirmNumber";
 import BtnSubmit from "./BtnSubmit";
 
 const initialValues = {
   loginMemberId: "",
   loginMemberPhone: "",
-  loginMemberPassword: ""
+  loginMemberPassword: "",
+  loginConfirmNumber: ""
 };
 
 const LoginForm = () => {
-  const handleSubmit = (values) => {
+  const handleSubmit = (values, { setSubmitting }) => {
     console.log(values);
+    setSubmitting(false);
   };
 
   return (
@@ -25,10 +26,8 @@ const LoginForm = () => {
         initialValues={initialValues}
         validationSchema={LoginSchema}
         onSubmit={handleSubmit}
-        validateOnChange={false}
-        validateOnBlur={false}
       >
-        {() => (
+        {({ isSubmitting }) => (
           <Form>
             <InputGroup
               inputType="text"
@@ -51,9 +50,22 @@ const LoginForm = () => {
             />
             <ErrorMessage name="loginMemberPassword" component={ErrorText} />
 
-            <ConfirmNumber name="loginConfirmNumber" component={ErrorText} />
+            <ConfirmNumberWrap>
+              <div>
+                <input type="text" defaultValue="045645" readOnly />
+                <Field
+                  type="text"
+                  name="loginConfirmNumber"
+                  placeholder="숫자 6자리를 입력해주세요"
+                  as="input"
+                />
+              </div>
+
+              <ErrorMessage name="loginConfirmNumber" component={ErrorText} />
+            </ConfirmNumberWrap>
+
             <BtnWrap>
-              <BtnSubmit type="submit" text="로그인"></BtnSubmit>
+              <BtnSubmit type="submit" text="로그인" disabled={isSubmitting} />
             </BtnWrap>
             <OtherLinks />
           </Form>
@@ -78,6 +90,48 @@ const ErrorText = styled.div`
   margin-top: -10px;
   margin-bottom: 10px;
   padding-left: 30px;
+`;
+
+const ConfirmNumberWrap = styled.div`
+  width: 300px;
+  margin: 3rem auto;
+
+  input {
+    width: 100%;
+    height: 70px;
+    border: none;
+    background: #fff;
+    color: #666666;
+    font-size: 2.4rem;
+    text-align: center;
+    margin-bottom: 10px;
+    &:first-child {
+      font-size: 3.5rem;
+      letter-spacing: 10px;
+    }
+  }
+  @media screen and (max-width: 1024px) {
+    width: 94%;
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem auto 3rem;
+    > div {
+      display: flex;
+      justify-content: space-between;
+    }
+    input {
+      width: calc(100% - 100px);
+      height: 45px;
+      font-size: 1.5rem;
+      margin-bottom: 0;
+      margin-left: 10px;
+      &:first-child {
+        letter-spacing: 0;
+        width: 100px;
+        font-size: 2.2rem;
+      }
+    }
+  }
 `;
 
 export const BtnWrap = styled.div`
