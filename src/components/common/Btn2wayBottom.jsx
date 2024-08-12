@@ -7,14 +7,30 @@ function Btn2wayBottom({
   firstBtnBgColor,
   secondBtnText,
   secondBtnType,
-  secondBtnBgColor
+  secondBtnBgColor,
+  onFirstBtnClick, // 첫번째 버튼 onClick
+  onSecondBtnClick // 두번째 버튼 onClick
 }) {
+  const handleFirstBtnClick = () => {
+    if (firstBtnText === "조회" && onFirstBtnClick) {
+      onFirstBtnClick();
+    }
+  };
+
   return (
     <Btn2wayBottomWrap>
-      <Btn2Way type={firstBtnType} className={firstBtnBgColor}>
+      <Btn2Way
+        type={firstBtnType}
+        className={firstBtnBgColor}
+        onClick={handleFirstBtnClick}
+      >
         {firstBtnText}
       </Btn2Way>
-      <Btn2Way type={secondBtnType} className={secondBtnBgColor}>
+      <Btn2Way
+        type={secondBtnType}
+        className={secondBtnBgColor}
+        onClick={onSecondBtnClick}
+      >
         {secondBtnText}
       </Btn2Way>
     </Btn2wayBottomWrap>

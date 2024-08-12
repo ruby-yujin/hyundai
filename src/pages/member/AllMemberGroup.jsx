@@ -56,4 +56,5 @@ const TableFilterBox = styled.div`
     gap: 10px;
   }
 `;
+
 export default AllMemberGroup;

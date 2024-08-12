@@ -86,3 +86,7 @@ button {
     opacity: 1;
   }
 }
+
+.ReactModal__Overlay--after-open {
+  z-index: 100;
+}

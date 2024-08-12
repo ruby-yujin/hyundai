@@ -4,9 +4,10 @@ import { BrowserRouter } from "react-router-dom";
 import CustomRouter from "./CustomRouter";
 import { NavProvider } from "./context/useNav";
 
-//TODO: Modal
+// 전체모달
 import { useModal } from "./context/useModal";
 import CustomModal from "./components/common/CustomModal";
+import ModalNotice from "./components/common/ModalNotice";
 
 const App = () => {
   const { isOpen, openModal, closeModal } = useModal();
@@ -15,12 +16,8 @@ const App = () => {
     <NavProvider>
       <div className="App">
         <BtnModalTest onClick={openModal}>모달버튼</BtnModalTest>
-        <CustomModal isOpen={isOpen} closeModal={closeModal}>
-          <ModalIcon>
-            <img src="/img/icon_notice.png" alt="공지 아이콘" />
-          </ModalIcon>
-          <ModalDecs>사원정보가 없습니다.</ModalDecs>
-          <ModalDecs>시스템 사용 등록해주세요.</ModalDecs>
+        <CustomModal isOpen={isOpen} closeModal={closeModal} padding="10px">
+          <ModalNotice />
         </CustomModal>
         <BrowserRouter>
           <CustomRouter />
@@ -39,21 +36,6 @@ const BtnModalTest = styled.button`
   right: 10px;
   z-index: 10;
   background: yellow;
-`;
-
-const ModalIcon = styled.h2`
-  margin: 0 auto 15%;
-  text-align: center;
-  > img {
-    display: inline-block;
-    max-width: 200px;
-  }
-`;
-
-const ModalDecs = styled.p`
-  font-size: 20px;
-  text-align: center;
-  margin-bottom: 2%;
 `;
 
 export default App;

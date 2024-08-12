@@ -45,6 +45,7 @@ const ContentGrid = styled.main`
   @media screen and (max-width: 1024px) {
     aside {
       /* display: none; */
+      z-index: 1;
     }
     section {
       padding-top: 10px;

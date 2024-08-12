@@ -5,7 +5,7 @@ import styled from "styled-components";
 
 ReactModal.setAppElement("#root");
 
-const customStyles = {
+const defaultStyles = {
   content: {
     top: "50%",
     left: "50%",
@@ -13,16 +13,31 @@ const customStyles = {
     bottom: "auto",
     marginRight: "-50%",
     transform: "translate(-50%, -50%)",
-    backgroundColor: "#fffded",
-    padding: "2.5rem 5rem",
-    borderRadius: "0"
+    padding: "",
+    borderRadius: "0",
+    zIndex: "10"
   },
   overlay: {
     backgroundColor: "rgba(0, 0, 0, 0.75)"
   }
 };
 
-const CustomModal = ({ isOpen, closeModal, children }) => {
+const CustomModal = ({
+  isOpen,
+  closeModal,
+  children,
+  backgroundColor = "#ffffff",
+  padding = "2.5rem 5rem"
+}) => {
+  const customStyles = {
+    content: {
+      ...defaultStyles.content,
+      backgroundColor,
+      padding
+    },
+    overlay: defaultStyles.overlay
+  };
+
   return (
     <ReactModal
       isOpen={isOpen}

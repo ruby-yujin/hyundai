@@ -13,7 +13,17 @@ import Btn2wayBottom from "../../components/common/Btn2wayBottom";
 import BtnPeriod from "../../components/common/BtnPeriod";
 import DatePickerStyle from "../../components/common/DatePickerStyle";
 
+//TODO: Modal
+import { useModal } from "../../context/useModal";
+import CustomModal from "../../components/common/CustomModal";
+
 function DeductionStatus() {
+  const { isOpen, openModal, closeModal } = useModal();
+
+  const handleFirstBtnClick = () => {
+    openModal();
+  };
+
   return (
     <OuterLayOutWrap>
       <TopTab />
@@ -48,12 +58,26 @@ function DeductionStatus() {
             firstBtnType=""
             firstBtnBgColor="blue"
             firstBtnText="조회"
+            onFirstBtnClick={handleFirstBtnClick}
             secondBtnType=""
             secondBtnBgColor="navy"
             secondBtnText="출력"
           />
         </ContentBottom>
       </InnerContent>
+      <CustomModal
+        isOpen={isOpen}
+        closeModal={closeModal}
+        backgroundColor="#fffded"
+      >
+        <NoApplyModal>
+          <ModalIcon>
+            <img src="/img/icon_notice.png" alt="공지 아이콘" />
+          </ModalIcon>
+          <ModalDecs>사원정보가 없습니다.</ModalDecs>
+          <ModalDecs>시스템 사용 등록해주세요.</ModalDecs>
+        </NoApplyModal>
+      </CustomModal>
     </OuterLayOutWrap>
   );
 }
@@ -74,4 +98,20 @@ const Flexbox = styled.div`
   gap: 20px;
 `;
 
+const NoApplyModal = styled.div``;
+
+const ModalIcon = styled.h2`
+  margin: 0 auto 15%;
+  text-align: center;
+  > img {
+    display: inline-block;
+    max-width: 200px;
+  }
+`;
+
+const ModalDecs = styled.p`
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 2%;
+`;
 export default DeductionStatus;
