@@ -7,8 +7,8 @@ import DropDown from "../../components/common/DropDown";
 import ContentHeader from "../../components/common/ContentHeader";
 import ContentBottom from "../../components/common/ContentBottom";
 import BtnReload from "../../components/common/BtnReload";
-import TableCommon from "../../components/common/TableCommon";
 import Btn3wayBottom from "../../components/common/Btn3wayBottom";
+import TableCommonEdit from "../../components/common/TableCommonEdit";
 
 function MemberRegister() {
   return (
@@ -20,7 +20,7 @@ function MemberRegister() {
           <BtnReload />
         </ContentHeader>
         <ContentBottom>
-          <TableCommon />
+          <TableCommonEdit />
           <Btn3wayBottom
             firstBtnType=""
             firstBtnBgColor="blue"
