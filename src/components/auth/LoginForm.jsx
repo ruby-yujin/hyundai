@@ -61,7 +61,10 @@ const LoginForm = () => {
                 />
               </div>
 
-              <ErrorMessage name="loginConfirmNumber" component={ErrorText} />
+              <ErrorMessage
+                name="loginConfirmNumber"
+                component={ErrorTextConfirmNum}
+              />
             </ConfirmNumberWrap>
 
             <BtnWrap>
@@ -92,9 +95,23 @@ const ErrorText = styled.div`
   padding-left: 30px;
 `;
 
+const ErrorTextConfirmNum = styled.div`
+  color: #f8fc12;
+  font-size: 1.2rem;
+
+  text-align: center;
+  margin-top: 0px;
+  @media screen and (max-width: 1024px) {
+    margin-top: 10px;
+    padding-left: 15px;
+  }
+`;
+
 const ConfirmNumberWrap = styled.div`
   width: 300px;
   margin: 3rem auto;
+  display: flex;
+  flex-direction: column;
 
   input {
     width: 100%;
@@ -124,7 +141,7 @@ const ConfirmNumberWrap = styled.div`
       height: 45px;
       font-size: 1.5rem;
       margin-bottom: 0;
-      margin-left: 10px;
+      margin-right: 10px;
       &:first-child {
         letter-spacing: 0;
         width: 100px;
