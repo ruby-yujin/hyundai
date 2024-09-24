@@ -43,10 +43,7 @@ const OtherLinksWrap = styled.ul`
   @media screen and (max-width: 1024px) {
     width: 310px;
     margin: 7% auto 0;
-    position: fixed;
-    bottom: 4rem;
-    left: 50%;
-    margin-left: -155px;
+
     li {
       text-align: center;
 

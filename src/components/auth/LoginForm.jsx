@@ -156,10 +156,6 @@ export const BtnWrap = styled.div`
   @media screen and (max-width: 1024px) {
     max-width: 500px;
     margin: 0 auto;
-    position: fixed;
-    bottom: 8rem;
-    left: 0;
-    right: 0;
     display: flex;
     justify-content: center;
     padding: 0 1rem;
